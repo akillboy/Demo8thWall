@@ -42,9 +42,10 @@
   background-color: #464766;
   padding: 3px 0px 0px 3px;
   color: white;
-  width: 10%;
 }
 #stopBtn img {
+  width: 3px;
+  height: 3px;
   margin: 3px 3px;
 }
 #stopBtn:focus {
@@ -62,9 +63,10 @@
   background-color: #464766;
   padding: 3px 0px 0px 3px;
   color: white;
-  width: 10%;
 }
 #expandBtn img {
+  width: 3px;
+  height: 3px;
   margin: 3px 3px;
 }
 #expandBtn:focus {
