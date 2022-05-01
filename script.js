@@ -128,34 +128,32 @@ const startAR = () => {
     }
     checkAcept = true;
   });
-  if (checkAcept) {
-    stopBtn.style.opacity = 0;
-    if (stopBtn.classList.contains("fade-out")) {
-      stopBtn.classList.remove("fade-out");
-    }
 
-    expandBtn.style.opacity = 0;
-    if (expandBtn.classList.contains("fade-out")) {
-      expandBtn.classList.remove("fade-out");
-    }
-    const styleCleanup = setTimeout(() => {
-      startBtn.style.display = "none";
-      poweredByLogo.style.display = "none";
-      stopBtn.style.display = "block";
-      expandBtn.style.display = "block";
-    }, 300);
-    const uiFadeIn = setTimeout(() => {
-      stopBtn.classList.add("fade-in");
-      expandBtn.classList.add("fade-in");
-    }, 800);
-
-    setTimeout(() => {
-      clearTimeout(styleCleanup);
-      clearTimeout(uiFadeIn);
-    }, 900);
-  } else {
-    return;
+  stopBtn.style.opacity = 0;
+  if (stopBtn.classList.contains("fade-out")) {
+    stopBtn.classList.remove("fade-out");
   }
+
+  expandBtn.style.opacity = 0;
+  if (expandBtn.classList.contains("fade-out")) {
+    expandBtn.classList.remove("fade-out");
+  }
+  const styleCleanup = setTimeout(() => {
+    startBtn.style.display = "none";
+    poweredByLogo.style.display = "none";
+    stopBtn.style.display = "block";
+    expandBtn.style.display = "block";
+  }, 300);
+  const uiFadeIn = setTimeout(() => {
+    stopBtn.classList.add("fade-in");
+    expandBtn.classList.add("fade-in");
+  }, 800);
+
+  setTimeout(() => {
+    clearTimeout(styleCleanup);
+    clearTimeout(uiFadeIn);
+  }, 900);
+
   iframe.setAttribute("src", INNER_FRAME_URL); // This is where the AR iframe's source is set.
 };
 
