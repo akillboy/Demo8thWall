@@ -134,7 +134,7 @@ const startAR = () => {
     stopBtn.classList.remove("fade-out");
   }
 
-  expandBtn.style.opacity = 1;
+  expandBtn.style.opacity = 0;
   if (expandBtn.classList.contains("fade-out")) {
     expandBtn.classList.remove("fade-out");
   }
