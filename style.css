@@ -33,7 +33,7 @@
 }
 
 #iframeControls {
-  /* display: block; */
+  display: block;
   position: absolute;
   height: 10%;
   width: 100%;
@@ -44,20 +44,16 @@
 
 #stopBtn {
   position: absolute;
+  opacity: 0;
   z-index: 1;
   transform: translateX(-50%);
   margin-top: 5%;
-  margin-left: 15%;
+  margin-left: 5%;
   border: 0;
   background-color: #1218d6;
   border-radius: 15px;
   padding: 3px 0px 0px 3px;
   color: white;
-
-  /* float: right;
-  border: 0;
-  background: none;
-  padding: 0; */
 }
 
 #stopBtn:focus {
@@ -74,12 +70,17 @@
 }
 
 #expandBtn {
-  margin-top: 20px;
-  margin-right: 20px;
-  float: right;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+  transform: translateX(-50%);
+  margin-top: 5%;
+  margin-right: 5%;
   border: 0;
-  background: none;
-  padding: 0;
+  background-color: #1218d6;
+  border-radius: 15px;
+  padding: 3px 0px 0px 3px;
+  color: white;
 }
 
 #expandBtn:focus {
@@ -161,31 +162,6 @@
 
 body {
   font-family: "Noto Serif", serif;
-}
-
-.grid-container {
-  display: inline-grid;
-  grid-template-columns: 75px auto 75px;
-  grid-template-rows: 50px;
-  margin: 0 auto;
-  width: 100%;
-}
-
-.grid-item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.author {
-  margin: 0px;
-}
-
-#date {
-  margin-top: 0.25em;
-  margin-bottom: 0.25em;
-  font-weight: bold;
-  font-style: italic;
 }
 
 header h1 {

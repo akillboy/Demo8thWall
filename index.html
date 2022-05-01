@@ -26,36 +26,6 @@
     <title>Demo IFrame 8thwall!</title>
   </head>
   <body>
-    <!-- <header class="grid-container">
-      <div class="grid-item" style="padding-right: 1em">
-        <img src="./assets/outer-website-assets/menu-icon.svg" />
-      </div>
-      <div class="grid-item">
-        <h1>The 8th Wall Demo TheMacallans</h1>
-      </div>
-      <div class="grid-item" style="padding-left: 1em">
-        <img src="./assets/outer-website-assets/profile-icon.svg" />
-      </div>
-    </header> -->
-    <!-- <div class="content">
-      <h1>The Macallan Harmony Collection</h1>
-
-      <p class="author">By KhoaNDA</p>
-
-      <p id="date"><br /></p>
-
-      <p>
-        Crafted from a harmonious combination of European and American oak
-        casks, this rich single malt whisky pairs in perfect harmony with fine
-        chocolates for an elevated tasting experience.
-      </p>
-
-      <p>
-        THE HARMONY COLLECTION RICH CACAO An exceptionally rich single malt
-        whisky characterised by its deep, dark chocolate profile.
-      </p>
-    </div>-->
-
     <!-- AR iframe -->
     <div id="inline-ar">
       <button id="startBtn" onClick="startAR()">
@@ -65,44 +35,18 @@
         id="poweredByLogo"
         src="./assets/outer-website-assets/poweredby8thwall.svg"
       />
-      <div id="iframeControls">
-        <button id="expandBtn" onClick="toggleFullscreen()">
-          <div id="expandImg"></div>
-        </button>
-        <button id="stopBtn" onClick="stopAR()">
-          <div id="stopImg"></div>
-        </button>
-      </div>
+      <button id="expandBtn" onClick="toggleFullscreen()">
+        <div id="expandImg"></div>
+      </button>
+      <button id="stopBtn" onClick="stopAR()">
+        <div id="stopImg"></div>
+      </button>
       <iframe
         id="my-iframe"
         allow="camera;gyroscope;accelerometer;magnetometer;xr-spatial-tracking;microphone;"
       >
       </iframe>
     </div>
-
-    <!-- <div class="content">
-      <p>
-        AN EXPLORATION OF CHOCOLATE A collaboration with renowned pastry chef
-        Jordi Roca of three Michelin star restaurant El Celler de Can Roca, this
-        release brings the worlds of chocolate and whisky to life. To create the
-        first limited edition whisky in a new annual release series, The
-        Macallan Whisky Maker Polly Logan embarked on a unique journey to
-        Girona, Spain, where she immersed herself in the world of chocolate,
-        exploring the chocolate-making process and uncovering the distinctive
-        flavour profiles at Casa Cacao. Polly worked with Jordi Roca, owner of
-        the famed chocolate boutique and hotel, Casa Cacao and the youngest of
-        the acclaimed Roca brothers. As part of the exploration, she also spent
-        time with master chocolatier of Casa Cacao, Damien Allsop.
-      </p>
-
-      <p>
-        SUSTAINABLE INNOVATION In homage to its chocolate influence, The
-        Macallan Harmony Collection Rich Cacao is presented in a 100% recyclable
-        gift box, made using discarded husks from cacao pods. A by-product in
-        the chocolate-making process, these husks would have been sent to
-        landfill or destroyed but have now been reborn with a renewed purpose.
-      </p>
-    </div> -->
     <script src="./script.js"></script>
   </body>
 </html>

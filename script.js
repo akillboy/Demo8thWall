@@ -13,9 +13,6 @@ const STOP_BTN_ID = "stopBtn"; // Button to stop AR.
 const EXPAND_BTN_ID = "expandBtn"; // Button to expand AR iframe to fill screen.
 const LOGO_ID = "poweredByLogo"; // Powered by 8th Wall logo
 
-// Other UI elements
-const DATE_ID = "date"; // Displays today's date in the article.
-
 // CSS classes for toggling appearance of elements when the iframe is full screen.
 const FULLSCREEN_IFRAME_CLASS = "fullscreen-iframe";
 const FULLSCREEN_CONTROLS_CLASS = "fullscreen-iframeControls";
@@ -27,10 +24,17 @@ const stopAR = () => {
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame();
 
-  const controls = document.getElementById(CONTROLS_ID);
-  controls.style.opacity = 1;
-  controls.classList.remove("fade-in");
-  controls.classList.add("fade-out");
+  const stopBtn = document.getElementById(STOP_BTN_ID);
+  stopBtn.style.opacity = 1;
+  stopBtn.style.display = "block";
+  stopBtn.classList.remove("fade-in");
+  stopBtn.classList.add("fade-out");
+
+  const expandBtn = document.getElementById(EXPAND_BTN_ID);
+  expandBtn.style.opacity = 1;
+  expandBtn.style.display = "block";
+  expandBtn.classList.remove("fade-in");
+  expandBtn.classList.add("fade-out");
 
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.style.opacity = 0;
@@ -54,9 +58,11 @@ const stopAR = () => {
     poweredByLogo.style.opacity = 1;
     poweredByLogo.classList.remove("fade-in");
 
-    controls.style.display = "none";
-    controls.style.opacity = 0;
-    controls.classList.remove("fade-out");
+    stopBtn.style.opacity = 0;
+    stopBtn.classList.remove("fade-out");
+
+    expandBtn.style.opacity = 0;
+    expandBtn.classList.remove("fade-out");
   }, 300);
 
   setTimeout(() => {
@@ -91,23 +97,9 @@ const createObserver = () => {
   );
 };
 
-// Sets today's date in the article
-const dateCheck = () => {
-  const date = new Date();
-  document.getElementById(DATE_ID).innerHTML = `${date.toLocaleDateString(
-    "en-US",
-    { month: "long" }
-  )} ${date.toLocaleDateString("en-US", {
-    day: "numeric",
-  })}, ${date.toLocaleDateString("en-US", { year: "numeric" })}`;
-};
-
 // Handles fullscreen button behavior
 const toggleFullscreen = () => {
   document.getElementById(IFRAME_ID).classList.toggle(FULLSCREEN_IFRAME_CLASS);
-  document
-    .getElementById(CONTROLS_ID)
-    .classList.toggle(FULLSCREEN_CONTROLS_CLASS);
   document
     .getElementById(EXPAND_BTN_ID)
     .classList.toggle(FULLSCREEN_EXPAND_BTN_CLASS);
@@ -122,7 +114,6 @@ const startAR = () => {
   window.XRIFrame.registerXRIFrame(IFRAME_ID);
 
   const iframe = document.getElementById(IFRAME_ID);
-  const controls = document.getElementById(CONTROLS_ID);
 
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.classList.add("fade-out");
@@ -136,17 +127,22 @@ const startAR = () => {
       return;
     }
 
-    controls.style.opacity = 0;
+    const stopBtn = document.getElementById(STOP_BTN_ID);
+    const expandBtn = document.getElementById(EXPAND_BTN_ID);
 
+    stopBtn.style.opacity = 0;
+    expandBtn.style.opacity = 0;
     const styleCleanup = setTimeout(() => {
       startBtn.style.display = "none";
       poweredByLogo.style.display = "none";
 
-      controls.style.display = "block";
+      stopBtn.style.display = "block";
+      expandBtn.style.display = "block";
     }, 300);
 
     const uiFadeIn = setTimeout(() => {
-      controls.classList.add("fade-in");
+      stopBtn.classList.add("fade-in");
+      expandBtn.classList.add("fade-in");
     }, 800);
 
     setTimeout(() => {
@@ -161,7 +157,6 @@ const startAR = () => {
 // Set up.
 const onLoad = () => {
   createObserver(); // handles intersection observer behavior
-  dateCheck(); // sets today's date in the article
 };
 
 // Add event listeners and callbacks for the body DOM.
