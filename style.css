@@ -47,8 +47,8 @@
   position: absolute;
   z-index: 1;
   transform: translateX(-50%);
-  margin-top: 30%;
-  margin-left: 30%;
+  margin-top: 5%;
+  margin-left: 5%;
   border: 0;
   background-color: #1218d6;
   border-radius: 15px;
@@ -75,12 +75,22 @@
 }
 
 #expandBtn {
-  margin-top: 20px;
+  position: absolute;
+  z-index: 1;
+  transform: translateX(-50%);
+  margin-top: 5%;
+  margin-right: 5%;
+  border: 0;
+  background-color: #1218d6;
+  border-radius: 15px;
+  padding: 3px 0px 0px 3px;
+  color: white;
+  /* margin-top: 20px;
   margin-right: 20px;
   float: right;
   border: 0;
   background: none;
-  padding: 0;
+  padding: 0; */
 }
 
 #expandBtn:focus {
