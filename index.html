@@ -35,16 +35,17 @@
         id="poweredByLogo"
         src="./assets/outer-website-assets/poweredby8thwall.svg"
       />
-      <button id="expandBtn" onClick="toggleFullscreen()">
-        <img src="./assets/outer-website-assets/expand-icon.svg" />
-      </button>
-      <button id="stopBtn" onClick="stopAR()">
-        <img src="./assets/outer-website-assets/close-icon.svg" />
-      </button>
+
       <iframe
         id="my-iframe"
         allow="camera;gyroscope;accelerometer;magnetometer;xr-spatial-tracking;microphone;"
       >
+        <button id="expandBtn" onClick="toggleFullscreen()">
+          <img src="./assets/outer-website-assets/expand-icon.svg" />
+        </button>
+        <button id="stopBtn" onClick="stopAR()">
+          <img src="./assets/outer-website-assets/close-icon.svg" />
+        </button>
       </iframe>
     </div>
     <script src="./script.js"></script>
