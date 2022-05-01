@@ -117,7 +117,6 @@ const startAR = () => {
   const expandBtn = document.getElementById(EXPAND_BTN_ID);
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.classList.add("fade-out");
-
   const poweredByLogo = document.getElementById(LOGO_ID);
   poweredByLogo.classList.add("fade-out");
   let checkAcept = false;
@@ -128,7 +127,8 @@ const startAR = () => {
     }
     checkAcept = true;
   });
-
+  stopBtn.style.display = "block";
+  expandBtn.style.display = "block";
   stopBtn.style.opacity = 0;
   if (stopBtn.classList.contains("fade-out")) {
     stopBtn.classList.remove("fade-out");
@@ -141,8 +141,6 @@ const startAR = () => {
   const styleCleanup = setTimeout(() => {
     startBtn.style.display = "none";
     poweredByLogo.style.display = "none";
-    stopBtn.style.display = "block";
-    expandBtn.style.display = "block";
   }, 300);
   const uiFadeIn = setTimeout(() => {
     stopBtn.classList.add("fade-in");
