@@ -37,6 +37,7 @@
   position: absolute;
   height: 10%;
   width: 100%;
+  top: 0%;
   left: 0%;
   z-index: 1;
   transform: translateX(-50%);
@@ -239,11 +240,11 @@ p {
   }
 
   #expandBtn {
-    /* display: none !important; */
+    display: inline !important;
   }
 
   #stopBtn {
-    /* display: none !important; */
+    display: inline !important;
   }
 }
 
