@@ -21,6 +21,17 @@ const FULLSCREEN_STOP_BTN_CLASS = "hidden";
 const stopAR = () => {
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame();
+  const stopBtn = document.getElementById(STOP_BTN_ID);
+  stopBtn.style.opacity = 1;
+  stopBtn.style.display = "block";
+  stopBtn.classList.remove("fade-in");
+  stopBtn.classList.add("fade-out");
+
+  const expandBtn = document.getElementById(EXPAND_BTN_ID);
+  expandBtn.style.opacity = 1;
+  expandBtn.style.display = "block";
+  expandBtn.classList.remove("fade-in");
+  expandBtn.classList.add("fade-out");
 
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.style.opacity = 0;
@@ -37,18 +48,6 @@ const stopAR = () => {
   // removes AR iframe's source to end AR session
   document.getElementById(IFRAME_ID).setAttribute("src", "");
 
-  const stopBtn = document.getElementById(STOP_BTN_ID);
-  stopBtn.style.opacity = 1;
-  stopBtn.style.display = "block";
-  stopBtn.classList.remove("fade-in");
-  stopBtn.classList.add("fade-out");
-
-  const expandBtn = document.getElementById(EXPAND_BTN_ID);
-  expandBtn.style.opacity = 1;
-  expandBtn.style.display = "block";
-  expandBtn.classList.remove("fade-in");
-  expandBtn.classList.add("fade-out");
-
   const styleCleanup = setTimeout(() => {
     startBtn.style.opacity = 1;
     startBtn.classList.remove("fade-in");
@@ -56,9 +55,11 @@ const stopAR = () => {
     poweredByLogo.style.opacity = 1;
     poweredByLogo.classList.remove("fade-in");
 
+    stopBtn.style.display = "none";
     stopBtn.style.opacity = 0;
     stopBtn.classList.remove("fade-out");
 
+    expandBtn.style.display = "none";
     expandBtn.style.opacity = 0;
     expandBtn.classList.remove("fade-out");
   }, 300);
@@ -112,7 +113,8 @@ const startAR = () => {
   window.XRIFrame.registerXRIFrame(IFRAME_ID);
 
   const iframe = document.getElementById(IFRAME_ID);
-
+  const stopBtn = document.getElementById(STOP_BTN_ID);
+  const expandBtn = document.getElementById(EXPAND_BTN_ID);
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.classList.add("fade-out");
 
@@ -124,24 +126,24 @@ const startAR = () => {
     if (event.data !== "acceptedCamera") {
       return;
     }
-    const stopBtn = document.getElementById(STOP_BTN_ID);
+
     stopBtn.style.opacity = 0;
     if (stopBtn.classList.contains("fade-out")) {
       stopBtn.classList.remove("fade-out");
     }
-    const expandBtn = document.getElementById(EXPAND_BTN_ID);
+
     expandBtn.style.opacity = 0;
     if (expandBtn.classList.contains("fade-out")) {
-      expandBtns.classList.remove("fade-out");
+      expandBtn.classList.remove("fade-out");
     }
     const styleCleanup = setTimeout(() => {
       startBtn.style.display = "none";
       poweredByLogo.style.display = "none";
+      stopBtn.style.display = "block";
+      expandBtn.style.display = "block";
     }, 300);
     const uiFadeIn = setTimeout(() => {
       stopBtn.classList.add("fade-in");
-      stopBtn.style.display = "block";
-      expandBtn.style.display = "block";
       expandBtn.classList.add("fade-in");
     }, 800);
 
