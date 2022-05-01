@@ -7,7 +7,6 @@ const INNER_FRAME_URL = "https://shadowfactory.8thwall.app/themacallanar";
 
 // User control elements for the iframe AR experience.
 const IFRAME_ID = "my-iframe"; // iframe containing AR content.
-const CONTROLS_ID = "iframeControls"; // Top bar including Stop Button and Expand Button.
 const START_BTN_ID = "startBtn"; // Button to start AR.
 const STOP_BTN_ID = "stopBtn"; // Button to stop AR.
 const EXPAND_BTN_ID = "expandBtn"; // Button to expand AR iframe to fill screen.
@@ -15,7 +14,6 @@ const LOGO_ID = "poweredByLogo"; // Powered by 8th Wall logo
 
 // CSS classes for toggling appearance of elements when the iframe is full screen.
 const FULLSCREEN_IFRAME_CLASS = "fullscreen-iframe";
-const FULLSCREEN_CONTROLS_CLASS = "fullscreen-iframeControls";
 const FULLSCREEN_EXPAND_BTN_CLASS = "fullscreen-btn";
 const FULLSCREEN_STOP_BTN_CLASS = "hidden";
 
@@ -23,19 +21,6 @@ const FULLSCREEN_STOP_BTN_CLASS = "hidden";
 const stopAR = () => {
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame();
-
-  const stopBtn = document.getElementById(STOP_BTN_ID);
-  stopBtn.style.opacity = 1;
-  stopBtn.style.display = "block";
-  stopBtn.classList.remove("fade-in");
-  stopBtn.classList.add("fade-out");
-
-  const expandBtn = document.getElementById(EXPAND_BTN_ID);
-  expandBtn.style.opacity = 1;
-  expandBtn.style.display = "block";
-  expandBtn.classList.remove("fade-in");
-  expandBtn.classList.add("fade-out");
-
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.style.opacity = 0;
   startBtn.style.display = "block";
@@ -50,6 +35,18 @@ const stopAR = () => {
 
   // removes AR iframe's source to end AR session
   document.getElementById(IFRAME_ID).setAttribute("src", "");
+
+  const stopBtn = document.getElementById(STOP_BTN_ID);
+  stopBtn.style.opacity = 1;
+  stopBtn.style.display = "block";
+  stopBtn.classList.remove("fade-in");
+  stopBtn.classList.add("fade-out");
+
+  const expandBtn = document.getElementById(EXPAND_BTN_ID);
+  expandBtn.style.opacity = 1;
+  expandBtn.style.display = "block";
+  expandBtn.classList.remove("fade-in");
+  expandBtn.classList.add("fade-out");
 
   const styleCleanup = setTimeout(() => {
     startBtn.style.opacity = 1;

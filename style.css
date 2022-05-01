@@ -32,16 +32,6 @@
   box-shadow: none !important;
 }
 
-#iframeControls {
-  display: block;
-  position: absolute;
-  height: 10%;
-  width: 100%;
-  left: 0%;
-  z-index: 1;
-  transform: translateX(-50%);
-}
-
 #stopBtn {
   position: absolute;
   z-index: 1;
@@ -49,13 +39,13 @@
   transform: translateX(-50%);
   margin-top: 5%;
   border: 0;
-  background-color: transparent;
+  background-color: #464766;
   padding: 3px 0px 0px 3px;
-  color: rgb(214, 76, 76);
+  color: white;
   width: 10%;
 }
 #stopBtn img {
-  margin: 5px 20px;
+  margin: 3px 3px;
 }
 #stopBtn:focus {
   outline: none !important;
@@ -69,13 +59,13 @@
   transform: translateX(-50%);
   margin-top: 5%;
   border: 0;
-  background-color: transparent;
+  background-color: #464766;
   padding: 3px 0px 0px 3px;
-  color: rgb(214, 76, 76);
+  color: white;
   width: 10%;
 }
 #expandBtn img {
-  margin: 5px 20px;
+  margin: 3px 3px;
 }
 #expandBtn:focus {
   outline: none !important;
