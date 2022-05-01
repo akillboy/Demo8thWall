@@ -21,6 +21,7 @@ const FULLSCREEN_STOP_BTN_CLASS = "hidden";
 const stopAR = () => {
   // deregisters the XRIFrame
   window.XRIFrame.deregisterXRIFrame();
+  alert("Start AR");
   const startBtn = document.getElementById(START_BTN_ID);
   startBtn.style.opacity = 0;
   startBtn.style.display = "block";
