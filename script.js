@@ -128,7 +128,7 @@ const startAR = () => {
     checkAcept = true;
   });
   stopBtn.style.display = "block";
-  expandBtn.style.display = "block";
+  expandBtn.style.display = "none";
   stopBtn.style.opacity = 1;
   if (stopBtn.classList.contains("fade-out")) {
     stopBtn.classList.remove("fade-out");
