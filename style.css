@@ -33,7 +33,7 @@
 }
 
 #iframeControls {
-  display: none;
+  /* display: none; */
   position: absolute;
   height: 10%;
   width: 100%;
@@ -239,11 +239,11 @@ p {
   }
 
   #expandBtn {
-    display: none !important;
+    /* display: none !important; */
   }
 
   #stopBtn {
-    display: none !important;
+    /* display: none !important; */
   }
 }
 
