@@ -129,12 +129,12 @@ const startAR = () => {
   });
   stopBtn.style.display = "block";
   expandBtn.style.display = "block";
-  stopBtn.style.opacity = 0;
+  stopBtn.style.opacity = 1;
   if (stopBtn.classList.contains("fade-out")) {
     stopBtn.classList.remove("fade-out");
   }
 
-  expandBtn.style.opacity = 0;
+  expandBtn.style.opacity = 1;
   if (expandBtn.classList.contains("fade-out")) {
     expandBtn.classList.remove("fade-out");
   }
