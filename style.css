@@ -37,15 +37,14 @@
   position: absolute;
   height: 10%;
   width: 100%;
-  top: 0%;
   left: 0%;
   z-index: 1;
   transform: translateX(-50%);
 }
 
 #stopBtn {
-  margin-top: 1em;
-  margin-left: 1em;
+  margin-top: 20px;
+  margin-left: 20px;
   float: left;
   border: 0;
   background: none;
@@ -66,8 +65,8 @@
 }
 
 #expandBtn {
-  margin-top: 1em;
-  margin-right: 1em;
+  margin-top: 20px;
+  margin-right: 20px;
   float: right;
   border: 0;
   background: none;
@@ -240,11 +239,11 @@ p {
   }
 
   #expandBtn {
-    display: inline !important;
+    display: block !important;
   }
 
   #stopBtn {
-    display: inline !important;
+    display: block !important;
   }
 }
 
