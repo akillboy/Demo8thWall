@@ -43,16 +43,16 @@
 }
 
 #stopBtn {
-  display: block;
   position: absolute;
   z-index: 1;
+  left: 15%;
   transform: translateX(-50%);
   margin-top: 25%;
-  left: 15%;
   border: 0;
   background-color: #1218d6;
   padding: 3px 0px 0px 3px;
   color: rgb(214, 76, 76);
+  width: 10%;
 }
 
 #stopBtn:focus {
@@ -69,16 +69,16 @@
 }
 
 #expandBtn {
-  display: block;
   position: absolute;
   z-index: 1;
+  right: 15%;
   transform: translateX(-50%);
   margin-top: 25%;
-  right: 15%;
   border: 0;
   background-color: #1218d6;
-  padding: 0px 0px 0px 0px;
-  color: rgb(179, 48, 48);
+  padding: 3px 0px 0px 3px;
+  color: rgb(214, 76, 76);
+  width: 10%;
 }
 
 #expandBtn:focus {
