@@ -29,7 +29,7 @@ const stopAR = () => {
 
   const expandBtn = document.getElementById(EXPAND_BTN_ID);
   expandBtn.style.opacity = 1;
-  expandBtn.style.display = "block";
+  expandBtn.style.display = "none";
   expandBtn.classList.remove("fade-in");
   expandBtn.classList.add("fade-out");
 

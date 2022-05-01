@@ -64,6 +64,7 @@
 }
 
 #expandBtn {
+  display: none;
   position: absolute;
   opacity: 0;
   z-index: 1000000;
