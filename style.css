@@ -74,22 +74,12 @@
 }
 
 #expandBtn {
-  position: absolute;
-  z-index: 1;
-  transform: translateX(-50%);
-  margin-top: 5%;
-  margin-left: 95%;
-  border: 0;
-  background-color: #1218d6;
-  border-radius: 15px;
-  padding: 3px 0px 0px 3px;
-  color: white;
-  /* margin-top: 20px;
+  margin-top: 20px;
   margin-right: 20px;
   float: right;
   border: 0;
   background: none;
-  padding: 0; */
+  padding: 0;
 }
 
 #expandBtn:focus {
