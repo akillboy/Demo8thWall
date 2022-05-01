@@ -122,13 +122,17 @@ const startAR = () => {
   const stopBtn = document.getElementById(STOP_BTN_ID);
   stopBtn.style.opacity = 1;
   stopBtn.style.display = "block";
-  stopBtn.classList.remove("fade-out");
+  if (stopBtn.classList.contains("fade-out")) {
+    stopBtn.classList.remove("fade-out");
+  }
   stopBtn.classList.add("fade-in");
 
   const expandBtn = document.getElementById(EXPAND_BTN_ID);
   expandBtn.style.opacity = 1;
   expandBtn.style.display = "block";
-  expandBtn.classList.remove("fade-out");
+  if (expandBtn.classList.contains("fade-out")) {
+    expandBtns.classList.remove("fade-out");
+  }
   expandBtn.classList.add("fade-in");
 
   // checks if camera has been accepted in iframe before displaying controls
