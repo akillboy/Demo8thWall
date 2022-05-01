@@ -47,13 +47,12 @@
   position: absolute;
   z-index: 1;
   transform: translateX(-50%);
-  margin-top: 5%;
-  margin-left: 5%;
+  margin-top: 25%;
+  left: 15%;
   border: 0;
   background-color: #1218d6;
-  border-radius: 15px;
   padding: 3px 0px 0px 3px;
-  color: white;
+  color: rgb(214, 76, 76);
 }
 
 #stopBtn:focus {
@@ -74,13 +73,12 @@
   position: absolute;
   z-index: 1;
   transform: translateX(-50%);
-  margin-top: 5%;
-  margin-right: 5%;
+  margin-top: 25%;
+  right: 15%;
   border: 0;
   background-color: #1218d6;
-  border-radius: 15px;
-  padding: 3px 0px 0px 3px;
-  color: white;
+  padding: 0px 0px 0px 0px;
+  color: rgb(179, 48, 48);
 }
 
 #expandBtn:focus {
