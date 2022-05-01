@@ -40,7 +40,6 @@
   left: 0%;
   z-index: 1;
   transform: translateX(-50%);
-  margin-top: 22%;
 }
 
 #stopBtn {
@@ -48,7 +47,7 @@
   z-index: 1;
   transform: translateX(-50%);
   margin-top: 5%;
-  margin-left: 5%;
+  margin-left: 15%;
   border: 0;
   background-color: #1218d6;
   border-radius: 15px;
