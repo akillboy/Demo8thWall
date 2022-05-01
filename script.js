@@ -120,13 +120,15 @@ const startAR = () => {
 
   const poweredByLogo = document.getElementById(LOGO_ID);
   poweredByLogo.classList.add("fade-out");
-
+  let checkAcept = false;
   // checks if camera has been accepted in iframe before displaying controls
   window.addEventListener("message", (event) => {
     if (event.data !== "acceptedCamera") {
       return;
     }
-
+    checkAcept = true;
+  });
+  if (checkAcept) {
     stopBtn.style.opacity = 0;
     if (stopBtn.classList.contains("fade-out")) {
       stopBtn.classList.remove("fade-out");
@@ -151,8 +153,9 @@ const startAR = () => {
       clearTimeout(styleCleanup);
       clearTimeout(uiFadeIn);
     }, 900);
-  });
-
+  } else {
+    return;
+  }
   iframe.setAttribute("src", INNER_FRAME_URL); // This is where the AR iframe's source is set.
 };
 
