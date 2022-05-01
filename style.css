@@ -43,8 +43,8 @@
 }
 
 #stopBtn {
+  display: block;
   position: absolute;
-  opacity: 0;
   z-index: 1;
   transform: translateX(-50%);
   margin-top: 5%;
@@ -70,8 +70,8 @@
 }
 
 #expandBtn {
+  display: block;
   position: absolute;
-  opacity: 0;
   z-index: 1;
   transform: translateX(-50%);
   margin-top: 5%;
