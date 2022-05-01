@@ -119,40 +119,29 @@ const startAR = () => {
   const poweredByLogo = document.getElementById(LOGO_ID);
   poweredByLogo.classList.add("fade-out");
 
-  const stopBtn = document.getElementById(STOP_BTN_ID);
-  stopBtn.style.opacity = 1;
-  stopBtn.style.display = "block";
-  if (stopBtn.classList.contains("fade-out")) {
-    stopBtn.classList.remove("fade-out");
-  }
-  stopBtn.classList.add("fade-in");
-
-  const expandBtn = document.getElementById(EXPAND_BTN_ID);
-  expandBtn.style.opacity = 1;
-  expandBtn.style.display = "block";
-  if (expandBtn.classList.contains("fade-out")) {
-    expandBtns.classList.remove("fade-out");
-  }
-  expandBtn.classList.add("fade-in");
-
   // checks if camera has been accepted in iframe before displaying controls
   window.addEventListener("message", (event) => {
     if (event.data !== "acceptedCamera") {
       return;
     }
-
-    stopBtn.style.opacity = 1;
-    expandBtn.style.opacity = 1;
+    const stopBtn = document.getElementById(STOP_BTN_ID);
+    stopBtn.style.opacity = 0;
+    if (stopBtn.classList.contains("fade-out")) {
+      stopBtn.classList.remove("fade-out");
+    }
+    const expandBtn = document.getElementById(EXPAND_BTN_ID);
+    expandBtn.style.opacity = 0;
+    if (expandBtn.classList.contains("fade-out")) {
+      expandBtns.classList.remove("fade-out");
+    }
     const styleCleanup = setTimeout(() => {
       startBtn.style.display = "none";
       poweredByLogo.style.display = "none";
-
-      stopBtn.style.display = "block";
-      expandBtn.style.display = "block";
     }, 300);
-
     const uiFadeIn = setTimeout(() => {
       stopBtn.classList.add("fade-in");
+      stopBtn.style.display = "block";
+      expandBtn.style.display = "block";
       expandBtn.classList.add("fade-in");
     }, 800);
 
