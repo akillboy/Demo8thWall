@@ -33,7 +33,7 @@
 }
 
 #iframeControls {
-  display: block;
+  /* display: block; */
   position: absolute;
   height: 10%;
   width: 100%;
